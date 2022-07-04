@@ -1,0 +1,1 @@
+## Basic project in which I cover firebase authentication 
