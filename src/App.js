@@ -4,6 +4,7 @@ import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import { AuthContextProvider } from "./store/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
+import Navbar from "./components/Navbar";
 
 function App() {
 	return (
@@ -11,6 +12,7 @@ function App() {
 			<h1 className="text-center text-3xl font-bold">
 				Firebase Auth and Context
 			</h1>
+			<Navbar />
 			<AuthContextProvider>
 				<Routes>
 					<Route path="/" element={<SignIn />} />
@@ -24,6 +26,7 @@ function App() {
 						}
 					/>
 					<Route path="/signin" element={<SignIn />} />
+					<Route path="*" element={<SignIn />} />
 				</Routes>
 			</AuthContextProvider>
 		</div>
